@@ -1,0 +1,12 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/widget_root"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/widget_bg">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Now Bar Road" android:textColor="#A9D4FF" android:textSize="13sp" />
+    <TextView android:id="@+id/morning" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" android:text="Утро · добавьте маршрут" android:textColor="#FFFFFF" android:textSize="17sp" android:maxLines="2" />
+    <TextView android:id="@+id/evening" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="6dp" android:text="Вечер · добавьте маршрут" android:textColor="#FFFFFF" android:textSize="17sp" android:maxLines="2" />
+    <TextView android:id="@+id/refresh" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" android:text="↻ Обновить" android:textColor="#A9D4FF" android:textSize="13sp" android:minHeight="32dp" android:gravity="center_vertical" />
+</LinearLayout>

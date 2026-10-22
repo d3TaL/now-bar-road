@@ -1,0 +1,27 @@
+[Unit]
+Description=Now Bar Road personal commute server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=nowbarroad
+Group=nowbarroad
+WorkingDirectory=/opt/now-bar-road/server
+EnvironmentFile=/etc/now-bar-road.env
+Environment=ROAD_DATA=/var/lib/now-bar-road/state.json
+ExecStart=/usr/bin/python3 /opt/now-bar-road/server/road.py
+Restart=on-failure
+RestartSec=5
+StateDirectory=now-bar-road
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+MemoryMax=192M
+TasksMax=32
+
+[Install]
+WantedBy=multi-user.target
